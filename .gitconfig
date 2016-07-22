@@ -1,0 +1,11 @@
+[user]
+	email = shun3382@gmail.com
+	name = Eishun Kondoh
+[core]
+	editor = emacs
+[alias]
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
+[merge]
+  tool = ediff
+[mergetool "ediff"]
+  cmd = emacsclient -c -a \"\"  --eval \"(ediff-merge-files-with-ancestor \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$BASE\\\" nil \\\"$MERGED\\\")\"
